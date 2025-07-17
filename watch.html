@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Watch Ads – Leben</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f5f9;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #1b4332;
+    }
+    iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
+      margin-top: 20px;
+      border-radius: 12px;
+    }
+    .impact {
+      margin-top: 30px;
+      background: #d8f3dc;
+      padding: 20px;
+      border-radius: 12px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎥 Watch to Feed Someone</h1>
+  <p>Every ad you watch helps fund meals for people in need.</p>
+
+  <!-- Replace this playlist URL with YOUR monetized content -->
+  <iframe src="https://www.youtube.com/embed/videoseries?list=PLYOUR_MONETIZED_PLAYLIST_ID" allowfullscreen></iframe>
+
+  <div class="impact">
+    <h2>Your Current Session Impact</h2>
+    <p id="meals">Meals earned: <strong>0</strong></p>
+  </div>
+
+  <script>
+    // Simulate earning 1 meal every 30 seconds of watching
+    let meals = 0;
+    setInterval(() => {
+      meals++;
+      document.getElementById("meals").innerHTML = `Meals earned: <strong>${meals}</strong>`;
+    }, 30000); // 30 seconds
+  </script>
+
+</body>
+</html>
